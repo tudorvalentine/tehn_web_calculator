@@ -101,5 +101,85 @@ namespace WebFormsCalculator
                 _memory -= value;
             }
         }
+
+        protected void SquareValue(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtDisplay.Text, out double value))
+            {
+                _result = Math.Pow(value, 2);
+                txtDisplay.Text = _result.ToString();
+            }
+        }
+
+        protected void CubeValue(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtDisplay.Text, out double value))
+            {
+                _result = Math.Pow(value, 3);
+                txtDisplay.Text = _result.ToString();
+            }
+        }
+
+        protected void ExpValue(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtDisplay.Text, out double value))
+            {
+                _result = Math.Exp(value);
+                txtDisplay.Text = _result.ToString();
+            }
+        }
+        protected void SqrtValue(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtDisplay.Text, out double value))
+            {
+                _result = Math.Sqrt(value);
+                txtDisplay.Text = _result.ToString();
+            }
+        }
+
+        protected void LogValue(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtDisplay.Text, out double value))
+            {
+                _result = Math.Log10(value);
+                txtDisplay.Text = _result.ToString();
+            }
+        }
+
+        protected void LnValue(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtDisplay.Text, out double value))
+            {
+                _result = Math.Log(value);
+                txtDisplay.Text = _result.ToString();
+            }
+        }
+        protected void FactorialValue(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtDisplay.Text, out int value))
+            {
+                if (value < 0)
+                {
+                    txtDisplay.Text = "Error";
+                }
+                else
+                {
+                    _result = Factorial(value);
+                    txtDisplay.Text = _result.ToString();
+                }
+            }
+        }
+
+        public static long Factorial(int n)
+        {
+            if (n == 0 || n == 1) return 1;
+            long result = 1;
+            for (int i = 2; i <= n; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
+
     }
 }

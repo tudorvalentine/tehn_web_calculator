@@ -17,6 +17,16 @@
                 <asp:Button ID="btnMR" runat="server" Text="MR" CssClass="btn btn-light" OnClick="MemoryRecall" />
                 <asp:Button ID="btnMMinus" runat="server" Text="M-" CssClass="btn btn-light" OnClick="MemoryMinus" />
                 <asp:Button ID="btnMPlus" runat="server" Text="M+" CssClass="btn btn-light" OnClick="MemoryPlus" />
+
+                <asp:Button ID="btnSquare" runat="server" Text="x²" CssClass="btn btn-gray" OnClick="SquareValue" />
+                <asp:Button ID="btnCube" runat="server" Text="x³" CssClass="btn btn-gray" OnClick="CubeValue" />
+                <asp:Button ID="btnExp" runat="server" Text="Exp" CssClass="btn btn-gray" OnClick="ExpValue" />
+                <asp:Button ID="btnSqrt" runat="server" Text="√" CssClass="btn btn-gray" OnClick="SqrtValue" />
+
+                <asp:Button ID="btnLog" runat="server" Text="log" CssClass="btn btn-gray" OnClick="LogValue" />
+                <asp:Button ID="btnLn" runat="server" Text="ln" CssClass="btn btn-gray" OnClick="LnValue" />
+                <asp:Button ID="btnFactorial" runat="server" Text="n!" CssClass="btn btn-gray" OnClick="FactorialValue" />
+
                 <asp:Button ID="btnClear" runat="server" Text="C" CssClass="btn btn-red" OnClick="ClearDisplay" />
                 <asp:Button ID="btn7" runat="server" Text="7" CssClass="btn btn-light" OnClick="Button_Click" />
                 <asp:Button ID="btn8" runat="server" Text="8" CssClass="btn btn-light" OnClick="Button_Click" />
